@@ -1,10 +1,14 @@
 import React from "react";
 
-const Header = () => {
+const Header = ({ dark }) => {
     return (
-        <header className="header">
+        <header className={dark ? "header header_dark" : "header"}>
             <div className="header__container container">
-                <img className="header__logo" src="img/logo.svg" alt="Fables" />
+                <img
+                    className="header__logo"
+                    src={dark ? "img/logo-purple.svg" : "img/logo.svg"}
+                    alt="Fables"
+                />
                 <nav className="nav">
                     <ul className="nav__list">
                         <li className="nav__item">
@@ -37,7 +41,14 @@ const Header = () => {
                     <div className="header__block header__block--search ">
                         <button className="header__search">
                             {" "}
-                            <img src="img/search.svg" alt="search" />
+                            <img
+                                src={
+                                    dark
+                                        ? "img/search-dark.svg"
+                                        : "img/search.svg"
+                                }
+                                alt="search"
+                            />
                         </button>
                     </div>
                     <div className="header__block header__block--account">

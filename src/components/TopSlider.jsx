@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 
-const TopSlider = ({ images }) => {
+const TopSlider = ({ images, style }) => {
     const settings = {
         arrows: false,
         dots: true,
@@ -37,7 +37,7 @@ const TopSlider = ({ images }) => {
     };
 
     return (
-        <div className="top-slider">
+        <div className="top-slider" style={{ ...style }}>
             <Slider {...settings}>
                 {images.map((image, index) => (
                     <img key={index} src={image.imgSrc} alt="banner" />

@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
     return (
-        <div className="footer">
+        <footer className="footer">
             <div className="container footer__container">
                 <div className="footer__row">
                     <img
@@ -47,7 +47,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </footer>
     );
 };
 
